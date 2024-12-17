@@ -73,7 +73,7 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       cl = "clear";
-      update = "sudo nixos-rebuild switch --flake '/home/alnav/nixOS#framework'";
+      update = "sudo nixos-rebuild switch --flake '/home/haru/nixos#lenovo'";
       clean-disk = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 1d";
       rofi-wifi = "${inputs.rofi-wifi}/rofi-wifi-menu.sh";
       update-flake = "nix flake lock --update-input";
