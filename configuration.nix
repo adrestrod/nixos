@@ -40,7 +40,7 @@
       "libvirtd"
     ];
 
-    hashedPassword = "$6$aP7uDMQ8p8JtT21t$x45v1p1HOsnLt.logCloyTBWCGPIjekq8MSPMPWaYnUTTcy.k3ch8YsGni1j1EfSbi27S31YuinngXF3WmXfb/";
+    hashedPassword = "$6$p9bhKFOoSafPZoJk$SzAS3R760Th7uh1dbblFb5k7/k4g.cSW7fwCTKcbnmI8NZ6m11RfLp0i.jTSNclMeCQUSrLm6sr4ttNC8qOU..";
   };
 
   security.sudo.extraRules = [
