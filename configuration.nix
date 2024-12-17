@@ -19,6 +19,7 @@
     '';
   };
   services.openssh.enable = true;
+  services.mullvad-vpn.enable = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
