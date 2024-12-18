@@ -62,7 +62,7 @@ services.kanata = {
     };
   };
 };
-
+networking.hostName = "Regulus";
 networking.firewall = {
     enable = true;
     allowedTCPPorts = [80 4200];

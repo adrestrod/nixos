@@ -62,8 +62,6 @@
         system = "x86_64-linux";
         useHomeManager = true;
       }
-
-
     ];
   in {
     nixosConfigurations = builtins.listToAttrs (map (host: {
