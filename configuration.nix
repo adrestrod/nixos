@@ -8,6 +8,9 @@
     nixpkgs = {
     # You can add overlays here
     overlays = [];
+    config.allowUnfreePredicate = pkg: builtins.elem(lib.getName pkg) [
+      "volatility3"
+    ];
   };
   imports =
     [./machines/${meta.hostname}/configuration.nix];
