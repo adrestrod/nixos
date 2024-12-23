@@ -13,7 +13,7 @@
     pkgs.radare2
     pkgs.ghidra
     pkgs.gdb
-    pkgs.volatility
+    pkgs.volatility3
     pkgs.imhex
 
     # Web pentesting
