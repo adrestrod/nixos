@@ -40,7 +40,4 @@
     # Mullvad VPN
     pkgs.mullvad-vpn
   ];
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "volatility3"
-    ];
 }
