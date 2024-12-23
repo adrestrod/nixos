@@ -1,7 +1,11 @@
-{pkgs, ...}: {
-  name = "cybersecurity-env";
+{
+  pkgs,
+  lib,
+  ...
+}: {
+  environment.systemPackages = with pkgs; [
 
-  buildInputs = [
+ 
     # General tools
     pkgs.git
     pkgs.curl
@@ -38,19 +42,4 @@
     # Mullvad VPN
     pkgs.mullvad-vpn
   ];
-
-  shellHook = ''
-    echo "Welcome to the Cybersecurity Environment!"
-    echo "Tools for malware reversing, pentesting, and OSINT are ready to use."
-
-    # Configure and start Mullvad VPN
-    if [ ! -f "$HOME/.config/mullvad-vpn/settings.json" ]; then
-      mkdir -p $HOME/.config/mullvad-vpn
-      ACCOUNT_NUMBER=$(grep '^MULLVAD_ACCOUNT=' .env | cut -d '=' -f2)
-      echo "{"account":"$ACCOUNT_NUMBER","autostart":true}" > $HOME/.config/mullvad-vpn/settings.json
-    fi
-
-    echo "Starting Mullvad VPN..."
-    mullvad-vpn &
-  '';
 }
