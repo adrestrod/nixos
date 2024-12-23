@@ -24,14 +24,12 @@
     pkgs.burpsuite
 
     # OSINT tools
-    pkgs.theHarvester
-    pkgs.recon-ng
+    pkgs.theharvester
     pkgs.maltego
-    pkgs.metagoofil
+    pkgs.exiftool
 
     # Python and Node.js for scripting
-    pkgs.python3
-    pkgs.python3Packages.pip
+    pkgs.python3Full
     pkgs.nodejs
 
     # Optional: Docker for containerized tools
