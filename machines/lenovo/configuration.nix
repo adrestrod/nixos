@@ -15,6 +15,7 @@
     ./../../modules/ricing.nix
     ./../../modules/social.nix
     ./../../modules/steamos.nix
+    ./../../modules/cybersec.nix
   ];
 
   # using latest linux kernel for network issues

@@ -1,6 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
-
-pkgs.mkShell {
+{pkgs, ...}: {
   name = "cybersecurity-env";
 
   buildInputs = [
