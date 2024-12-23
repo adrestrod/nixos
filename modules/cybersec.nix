@@ -56,27 +56,5 @@ pkgs.mkShell {
 
     echo "Starting Mullvad VPN..."
     mullvad-vpn &
-
-    # Configure Git user details
-    GIT_NAME=$(grep '^GIT_NAME=' .env | cut -d '=' -f2)
-    GIT_EMAIL=$(grep '^GIT_EMAIL=' .env | cut -d '=' -f2)
-    if [ -n "$GIT_NAME" ] && [ -n "$GIT_EMAIL" ]; then
-      git config --global user.name "$GIT_NAME"
-      git config --global user.email "$GIT_EMAIL"
-      echo "Configured Git with name: $GIT_NAME and email: $GIT_EMAIL"
-    else
-      echo "Git configuration skipped. Missing GIT_NAME or GIT_EMAIL in .env file."
-    fi
-
-    # Configure SSH
-    SSH_KEY=$(grep '^SSH_KEY=' .env | cut -d '=' -f2)
-    if [ -n "$SSH_KEY" ]; then
-      mkdir -p $HOME/.ssh
-      echo "$SSH_KEY" > $HOME/.ssh/id_rsa
-      chmod 600 $HOME/.ssh/id_rsa
-      echo "SSH key configured."
-    else
-      echo "SSH key configuration skipped. Missing SSH_KEY in .env file."
-    fi
   '';
 }
