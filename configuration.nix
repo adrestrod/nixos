@@ -3,6 +3,8 @@
   meta,
   ...
 }: {
+    # Enable unfree software
+    nixpkgs.config.allowUnfree = true;
     security.polkit.enable = true;
     # Add overlays
     nixpkgs = {
